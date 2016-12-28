@@ -10,4 +10,26 @@
 "hello".gsub(/[aeiou]/, '*')                  #=> "h*ll*"
 ```
 
+- The power of gsub(*args):
 
+```.rb
+garden.gsub(/(?!rock\b|gravel\b)\b(\w+)/, 'gravel') # Replaces every substring in garden which isn't gravel or rock with gravel.
+```
+
+## Lists
+
+### List Comprehension:
+
+- List.map { }:
+
+```.rb
+garden.split.map { |item| ["gravel", "rock"].include?(item) ? item : "gravel" }
+```
+
+### List to String:
+
+- List.join(" "):
+
+```.rb
+garden.join(" ")
+```
