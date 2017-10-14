@@ -7,9 +7,6 @@
 # This solution can work for any grid size.
 MAX_HEIGHT = 6
 
-# Coordinates of a Skyscraper in the Matrix
-Coordinates = Struct.new(:x, :y)
-
 # A line of buildings could either be horizontal or vertical
 # horizontal: could either be true or false
 # r: is the distance of line from the origin
