@@ -81,7 +81,7 @@ module ClueApplier
     # Gets combinations of heights, based on height candidates of skyscrapers
     def get_height_combos(skyscrapers)
       (1..MAX_HEIGHT).to_a.permutation(MAX_HEIGHT).to_a.select do |combo|
-        combo.map.with_index.select { |h, i| skyscrapers[i].heights.include? h }
+        combo.map.with_index.all? { |h, i| skyscrapers[i].heights.include? h }
       end
     end
 
