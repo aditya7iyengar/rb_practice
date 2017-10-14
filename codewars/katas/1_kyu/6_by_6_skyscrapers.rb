@@ -70,7 +70,7 @@ module ClueApplier
           # Use all height combos, as this clue is of no help
           get_height_combos(skyscrapers)
         when MAX_HEIGHT
-          get_height_combos(skyscrapers).select { |h| strip.send(fn) == get_visibility(h)}
+          valid_combos_for_max_height()
         else
           get_height_combos(skyscrapers).select { |h| strip.send(fn) == get_visibility(h)}
         end
